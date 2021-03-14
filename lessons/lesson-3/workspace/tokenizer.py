@@ -1,0 +1,2 @@
+def tokenize(content):
+	pass
