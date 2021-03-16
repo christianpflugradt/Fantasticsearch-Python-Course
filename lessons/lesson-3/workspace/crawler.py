@@ -1,5 +1,2 @@
-def download_jep():
-    pass
-
 def crawl():
-    pass
+    return "<html><title>JEP 0 - index</title><body>this is just a placeholder</body></html>"

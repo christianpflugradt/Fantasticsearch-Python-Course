@@ -7,7 +7,7 @@ search_form = """
 	  <label for="search">Your Input:</label>
 	  <input type="text" id="search" name="search" value="">
 	  <input type="submit" value="Search">
-	  $COOLCONTENT
+	  ${PLACEHOLDER}
 	</form> 
 	</body></html>
 """
@@ -29,7 +29,7 @@ class FantasticServer(BaseHTTPRequestHandler):
 			return []
 			
 	def html(self):
-		return search_form.replace("$COOLCONTENT", "<p>%s</p>" % str(self.render()))
+		return search_form.replace("${PLACEHOLDER}", "<p>%s</p>" % str(self.render()))
 		
 	def render(self):
 		lines = ["<a href=http://openjdk.java.net/jeps/%s>%s</a>" % (id, title) for id, title in sorted(search(self.tokens()), key=(lambda tuple: int(tuple[0])))]

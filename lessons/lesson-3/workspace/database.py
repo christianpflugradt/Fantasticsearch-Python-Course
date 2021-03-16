@@ -1,9 +1,9 @@
 
 def exists(filename):
-    pass
+    return False
 
 def save(data, filename):
     pass
 
 def restore(filename):
-    pass
+    return "de-serialized data"

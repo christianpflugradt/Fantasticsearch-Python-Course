@@ -1,6 +1,6 @@
 
 def get_number_of_threads():
-	pass
+	return 1
 	
 def wait_until_threshold_reached():
 	pass

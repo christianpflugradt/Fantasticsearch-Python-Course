@@ -1,2 +1,2 @@
 def tokenize(content):
-	pass
+	return ["data", "split", "into", "tokens"]
