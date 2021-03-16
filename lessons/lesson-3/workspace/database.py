@@ -1,4 +1,3 @@
-
 def exists(filename):
     return False
 
