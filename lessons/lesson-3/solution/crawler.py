@@ -11,26 +11,26 @@ titlematch = r'<title>(.+)</title>'
 jepdb = []
 
 def get_jep(id):
-	try:
-		return str(urlopen('%s%s' % (jepbaseurl, str(id))).read()).replace('\\n',' ').replace('\\r',' ')
-	except:
-		print('could not download jep :-(')
-		return None
-	
+    try:
+        return str(urlopen('%s%s' % (jepbaseurl, str(id))).read()).replace('\\n',' ').replace('\\r',' ')
+    except:
+        print('could not download jep :-(')
+        return None
+
 def download_jep(id):
-	content = get_jep(id)
-	if content is not None:
-		title = findall(titlematch, content)[0]
-		jepdb.append((id, title, content))
+    content = get_jep(id)
+    if content is not None:
+        title = findall(titlematch, content)[0]
+        jepdb.append((id, title, content))
 
 def crawl_all_jeps():
-	jepindex = get_jep(0)
-	hits = findall(jepmatch, jepindex)
-	for hit in hits:
-		Thread(target=download_jep, args=(hit,)).start()
+    jepindex = get_jep(0)
+    hits = findall(jepmatch, jepindex)
+    for hit in hits:
+        Thread(target=download_jep, args=(hit,)).start()
 
 def crawl():
-	threshold = count()
-	crawl_all_jeps()
-	wait_for(threshold)
-	return jepdb
+    threshold = count()
+    crawl_all_jeps()
+    wait_for(threshold)
+    return jepdb

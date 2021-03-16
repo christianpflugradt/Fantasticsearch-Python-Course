@@ -4,7 +4,7 @@ from searchengine import set_database
 from threading import Thread
 
 def launch():
-	Thread(target=serve, args=()).start()
-	Thread(target=load_data, args=(set_database,)).start()
-		
+    Thread(target=serve, args=()).start()
+    Thread(target=load_data, args=(set_database,)).start()
+
 launch()
