@@ -1,6 +1,7 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from searchengine import has_database, search
 
+jepbaseurl = 'http://openjdk.java.net/jeps/'
 search_form = """
 	<html><title>Fantasticsearch</title><body>
 	<form action="/">
@@ -23,16 +24,13 @@ class FantasticServer(BaseHTTPRequestHandler):
 			self.wfile.write(bytes("<p>still initializing...</p>", "utf-8"))
 			
 	def tokens(self):
-		if "search=" in self.path:
-			return self.path.split("search=")[1].split('+')
-		else:
-			return []
-			
+		return self.path.split("search=")[1].split('+') if "search=" in self.path else []
+
 	def html(self):
 		return search_form.replace("${PLACEHOLDER}", "<p>%s</p>" % str(self.render()))
 		
 	def render(self):
-		lines = ["<a href=http://openjdk.java.net/jeps/%s>%s</a>" % (id, title) for id, title in sorted(search(self.tokens()), key=(lambda tuple: int(tuple[0])))]
+		lines = ["<a href=%s>%s</a>" % (jepbaseurl, id, title) for id, title in sorted(search(self.tokens()), key=(lambda tuple: int(tuple[0])))]
 		return "<br>".join(lines) if len(lines) > 0 else "<p>no jeps found for search term :-(</p>"
 			
 	def sort_val(self, tuple):

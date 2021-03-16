@@ -10,18 +10,7 @@ search_form = """
 """
 
 class FantasticServer:
-
-	def receive_request(self):
-		pass
-
-	def tokens(self):
-		pass
-
-	def html(self):
-		pass
-
-	def render(self):
-		pass
+	pass
 
 def serve():
 	pass
