@@ -160,7 +160,7 @@ so let's use a standard library for that.
 
 Input the following into your REPL: ```from collections import Counter as c```
 
-Oh something new. :-) We imported the ```Counter``` class from the ```collections``` module
+Oh, something new! We imported the ```Counter``` class from the ```collections``` module
 and refer to it as ```c``` (because programmers are lazy).
 
 If we entered ```import collections``` we would have to refer
