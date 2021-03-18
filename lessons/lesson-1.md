@@ -79,8 +79,26 @@ Expected value of ```e```:  ```[100, 'hello, world!', True, None]```
 * You can replace the square brackets by curly brackets to use a set instead of a list.
 * You can declare an empty list by assigning ```[]```.
 * You cannot assign ```{}``` to create an empty set, instead assign ```set()```.
-Why? You will see in a moment.
-  
+Why? You will see in a moment. But first let's have another look at lists.
+
+```string = 'Fantasticsearch'```
+
+Strings are basically lists (of characters). Input the following commands and observe the output:
+
+```string[1:4]```
+
+```string[:4]```
+
+```string[4:]```
+
+```string[1:-1]```
+
+```string[-4:-1]```
+
+```string[:]```
+
+You can easily extract a sub list from a list this way: ```[1,2,3,4][1:-1] == [2,3]```  
+
 ## Dictionary ##
 
 Let's create a dictionary. This is also called an associative array or a map in other languages:
@@ -90,6 +108,10 @@ Let's create a dictionary. This is also called an associative array or a map in 
 Expected value of ```f```: ```{100: 'hello, world!', True: None}```
 
 Now guess what ```{}``` creates? Right, an empty dictionary.
+
+Accessing dictionaries is very *pythonic*. Can you guess how to extract ```'hello, world!'``` from ```f```?
+
+Yes, it's ```f[100]```, or alternatively ```f[a]```.
 
 ## Tuple ##
 
