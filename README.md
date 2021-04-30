@@ -1,5 +1,7 @@
 # An introduction to the Python language #
 
+[![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue.svg)](https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses)
+
 ## Who this course is for ##
 
 This course will teach you the basics of Python. 
