@@ -1,5 +1,10 @@
 # An introduction to the Python language #
 
+> [!NOTE]
+> **This project is archived.** I no longer maintain this course. It was written in 2021 and Python
+> has moved on since then, so some content may be outdated. It stays available for reference and
+> learning. Please don't confuse it with my active projects.
+
 [![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue.svg)](https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses)
 
 ## Who this course is for ##
